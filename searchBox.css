@@ -1,0 +1,29 @@
+.searchboxjs-searchbox {
+    position: relative; 
+    z-index: 2; 
+}
+
+.searchboxjs-search-results {
+    position: absolute;
+    width: calc(100% - 2px); /* Subtracting borders to match width */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* This ensures the results div is below the input */
+    display: none; /* Hide the results by default */
+}
+
+/* Optional: Basic styling for individual search results */
+.searchboxjs-search-results div {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.searchboxjs-search-results div:last-child {
+    border-bottom: none; /* Remove border for the last result */
+}
+
+.searchboxjs-search-results div:hover {
+    background-color: #f5f5f5;
+}

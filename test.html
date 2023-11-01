@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <!-- Don't forget to link your CSS here -->
+    <link rel="stylesheet" href="searchBox.css">
+    <script src="searchBox.js" defer></script>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const search = new searchBox();
+            search.elementId = 'search'; // the id of the input field
+            search.apiKey = ''; // your api key
+            search.acceptLanguage = 'en-US'; // if null, defaults to browser language
+            search.init(); // this bind to the input field
+
+            search.on('itemSelected', (item) => {
+                console.log('Selected item:', item);
+            });
+        }, false);
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+    <p>Test</p>
+    <input id="search" type="text" name="search" value="test">
+    <!-- This is where search results will appear -->
+    <h1>dawdaw</h1>
+    <h1>dawdaw</h1>
+    <h1>dawdaw</h1>
+    <h1>dawdaw</h1>
+</body>
+</html>
