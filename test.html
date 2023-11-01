@@ -6,17 +6,14 @@
     <title>Search Results</title>
     <!-- Don't forget to link your CSS here -->
     <link rel="stylesheet" href="searchBox.css">
-    <script src="searchBox.js" defer></script>
+    <script type="module">
+        import searchBox from './searchBox.js';
     
-
-    <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const search = new searchBox();
-            search.elementId = 'search'; // the id of the input field
-            search.apiKey = ''; // your api key
+            const search = new searchBox('search', 'token123');
             search.acceptLanguage = 'en-US'; // if null, defaults to browser language
             search.init(); // this bind to the input field
-
+    
             search.on('itemSelected', (item) => {
                 console.log('Selected item:', item);
             });
